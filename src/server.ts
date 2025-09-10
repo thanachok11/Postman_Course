@@ -66,8 +66,56 @@ app.delete("/books/:id", (req: Request, res: Response) => {
 });
 
 app.get("/", (req: Request, res: Response) => {
-    res.send("This API for Test POSTMAN COURSE");
+    res.send(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>POSTMAN COURSE API</title>
+            <style>
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    background: linear-gradient(to right, #4facfe, #00f2fe);
+                    color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    margin: 0;
+                    text-align: center;
+                }
+                h1 {
+                    font-size: 3rem;
+                    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                }
+                p {
+                    font-size: 1.2rem;
+                    margin-top: 1rem;
+                }
+                a {
+                    color: #fff;
+                    text-decoration: underline;
+                }
+            </style>
+        </head>
+        <body>
+            <div>
+                <h1>This API for Test POSTMAN COURSE</h1>
+                <p>Use the endpoints below:</p>
+                <ul>
+                    <li><a href="/books">GET /books</a></li>
+                    <li>GET /books/:id</li>
+                    <li>POST /books</li>
+                    <li>PUT /books/:id</li>
+                    <li>DELETE /books/:id</li>
+                </ul>
+            </div>
+        </body>
+        </html>
+    `);
 });
+
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
