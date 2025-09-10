@@ -104,11 +104,11 @@ app.get("/", (req: Request, res: Response) => {
                 <h1>This API for Test POSTMAN COURSE</h1>
                 <p>Use the endpoints below:</p>
                 <ul>
-                    <li><a href="/books">GET /books</a></li>
-                    <li>GET /books/:id</li>
-                    <li>POST /books</li>
-                    <li>PUT /books/:id</li>
-                    <li>DELETE /books/:id</li>
+                    <a href="/books">GET /books</a></li>
+                    GET /books/:id</li>
+                    POST /books</li>
+                    PUT /books/:id</li>
+                    DELETE /books/:id</li>
                 </ul>
             </div>
         </body>
