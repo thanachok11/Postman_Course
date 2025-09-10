@@ -19,9 +19,7 @@ let books: Book[] = [
     { id: 1, title: "Intro to Programming", author: "John Doe", year: 2022 },
     { id: 2, title: "Advanced JS", author: "Jane Doe", year: 2023 },
 ];
-app.get("/", (req: Request, res: Response) => {
-    console.log("This API for Test POSTMAN COURSE");
-});
+
 // GET /books
 app.get("/books", (req: Request, res: Response) => {
     res.json(books);
@@ -65,6 +63,10 @@ app.delete("/books/:id", (req: Request, res: Response) => {
 
     const deletedBook = books.splice(index, 1);
     res.json(deletedBook[0]);
+});
+
+app.get("/", (req: Request, res: Response) => {
+    res.send("This API for Test POSTMAN COURSE");
 });
 
 app.listen(port, () => {
