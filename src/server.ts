@@ -35,12 +35,13 @@ app.get("/", (req: Request, res: Response) => {
                     margin: 0;
                 }
                 .container {
+                    margin-top: 170px;
                     max-width: 900px;
                     text-align: center;
                     background: rgba(0, 0, 0, 0.4);
-                    padding: 30px;
-                    border-radius: 15px;
-                    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+                    padding: 40px;
+                    border-radius: 45px;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
                 }
                 h1 {
                     font-size: 2.5rem;
