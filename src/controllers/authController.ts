@@ -40,7 +40,6 @@ export const register = async (req: Request, res: Response): Promise<void> => {
             password: hashedPassword,
             firstName,
             lastName,
-            isActive: false,
             role: 'user', // เปลี่ยนจาก 'admin' เป็น 'user' เป็นค่าเริ่มต้น
             profile_img: 'https://res.cloudinary.com/dboau6axv/image/upload/v1735641179/qa9dfyxn8spwm0nwtako.jpg', // กำหนด profile_img
         });
