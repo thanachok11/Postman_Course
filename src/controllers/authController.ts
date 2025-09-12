@@ -64,12 +64,6 @@ export const login = async (req: Request, res: Response): Promise<void> => {
             return;
         }
 
-        // ✅ เช็คสถานะบัญชี
-        if (!user.isActive) {
-            res.status(403).json({ message: 'บัญชีนี้ถูกปิดใช้งานอยู่ กรุณาติดต่อ Admin' });
-            return;
-        }
-
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             res.status(400).json({ message: 'Incorrect password' });
