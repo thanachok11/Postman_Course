@@ -78,7 +78,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
             username: user.username,
             role: user.role,
             profile_img: user.profile_img,
-        }, process.env.JWT_SECRET as string, { expiresIn: '20m' });
+        }, process.env.JWT_SECRET as string, { expiresIn: '3h' });
 
         res.status(200).json({
             message: 'Login successful',
